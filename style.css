@@ -1,6 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap');
 .welcome {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+    font-size: 60px;
+    text-decoration: underline;
     text-align: center;
+    margin-top: 10vh ;
+    color: white;
+}
+body {
+    background: url(https://3.bp.blogspot.com/-5OJ68frRnyM/XFREb5_XgjI/AAAAAAAAEx8/CT04yRBP4DA1EzZYoLfGGoUV6oEzTwonwCHMYCw/s1600/the-matrix-wallpaper-and-background-image-1440x900-id5513.jpg)no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.buttonBox {
+    background-color: whitesmoke;
+    padding: 1px;
+    width: 60%;
+    height: 450px;
+    margin: auto;
+}
+.mainReason {
+    text-align: center;
+    margin: auto;
+    padding-top: 5px;
+    background-color: green;
+    font-family: 'Josefin Sans', sans-serif;
 }
