@@ -67,6 +67,7 @@ body {
     word-wrap: break-word;
     max-width: calc(100% - 40px);
     font-family: 'Josefin Sans', sans-serif;
+    color: white;
 }
 .result-container .btn {
     font-size: 20px;
