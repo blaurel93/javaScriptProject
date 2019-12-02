@@ -32,7 +32,7 @@ generateEl.addEventListener('click', () => {
     );
 });
 // COPY PASS WORD TO CLIPBOARD //
-clipboardEl.addEventListener('click', () => {
+clipboard.addEventListener('click', () => {
     const textarea = document.createElement('textarea');
     const password = resultEl.innerText;
 
@@ -51,7 +51,7 @@ clipboardEl.addEventListener('click', () => {
 
 
 // GENERATE PASSWORD FUNCTION //
-function generatePassword(upper, lower, symbol, number, length) {
+function generatePassword(lower, upper, symbol, number, length) {
     //1. initialize password variable //
     //2. filter out unchecked types//
     //3. Loop over the length, call generator function for each type //
@@ -62,7 +62,7 @@ function generatePassword(upper, lower, symbol, number, length) {
 
     // console.log('typesCount: ', typesCount);
 
-    const typesArray = [{ upper }, { lower }, { symbol }, { number }].filter
+    const typesArray = [{ lower }, { upper }, { symbol }, { number }].filter
         (item => Object.values(item)[0]
         );
 
@@ -80,7 +80,7 @@ function generatePassword(upper, lower, symbol, number, length) {
         });
     }
     const finalPassword = generatedPassword.slice(0, length);
-    
+
     return finalPassword;
 }
 // Selection Funtions ie. Include numbers symbols lower upper //
