@@ -14,14 +14,14 @@
 
 <body>
     <header class='welcome col-lg-12 col-md-12 col-sm-12'>
-        <p>Welcome to a jS Demo</p>
+        <p class='head-hover'>Welcome to a jS Demo</p>
     </header>
 
     <div class='container mainview'>
         <div class='row col-lg-12 col-md-12 col-sm-12'>
             <div class='buttonBox col-lg-8 col-md-8 col-sm-8'>
                 <div class='container mainReason'>
-                    <h2>Password Generator</h2>
+                    <h2 class='main-hover'>Password Generator</h2>
                 </div>
                 <div class='result-container'>
                     <span id='result'></span>
@@ -30,23 +30,35 @@
                     </button>
                 </div>
                 <div class='settings'>
-                    <label>Password Length</label>
-                    <input type='number' id='length' min='8' max='128' value='' />
+                    <div class='setting'>
+                        <label class='setting-hover'>Password Length</label>
+                        <input type='number' id='length' min='8' max='128' value='' />
+                    </div>
+                    <div class='setting'>
+                        <label class='setting-hover'>Uppercase letters</label>
+                        <input type='checkbox' id='uppercase' />
+                    </div>
+                    <div class='setting'>
+                        <label class='setting-hover'>Lowercase letters</label>
+                        <input type='checkbox' id='lowercase' />
+                    </div>
+                    <div class='setting'>
+                        <label class='setting-hover'>Special Characters</label>
+                        <input type='checkbox' id='symbols' />
+                    </div>
+                    <div class='setting'>
+                        <label class='setting-hover'>Numbers</label>
+                        <input type='checkbox' id='numbers' />
+                    </div>
                 </div>
+                <button class='btn btn-large' id='generate'>
+                    Generate a password?
+                </button>
             </div>
         </div>
 
 
     </div>
-
-
-
-    <footer>
-
-    </footer>
-
-
-
 
     <script src="moving.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -58,4 +70,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    < </body> </html>
+</body>
+
+</html>

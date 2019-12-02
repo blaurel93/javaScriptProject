@@ -7,8 +7,17 @@
     margin-top: 10vh ;
     color: white;
 }
+.head-hover:hover {
+    color: green;
+}
+.main-hover:hover {
+    color: green;
+}
+.setting-hover:hover {
+    color: green;
+}
 body {
-    background: url(https://3.bp.blogspot.com/-5OJ68frRnyM/XFREb5_XgjI/AAAAAAAAEx8/CT04yRBP4DA1EzZYoLfGGoUV6oEzTwonwCHMYCw/s1600/the-matrix-wallpaper-and-background-image-1440x900-id5513.jpg)no-repeat center center fixed; 
+    background: url(https://images.pexels.com/photos/754082/pexels-photo-754082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -21,22 +30,24 @@ body {
 }
 /* body of buttons */
 .buttonBox {
-    background-color: whitesmoke;
+    background-color:transparent;
     padding: 1px;
     width: 60%;
-    height: 450px;
+    height: 470px;
     margin: auto;
 }
 .mainReason {
     text-align: center;
     margin: auto;
     padding-top: 5px;
-    background-color: green;
+    margin-top: 10px;
+    color: white;
     font-family: 'Josefin Sans', sans-serif;
 }
 /* main button style */
+
 .result-container {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color:whitesmoke;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -60,15 +71,28 @@ body {
     width: 40px;
 }
 .btn {
-    border: none;
-    color: #fff;
+    border: 1px solid black !important;
+    color: #fff !important;
     cursor: crosshair;
     font-size: 16px;
     padding: 8px 12px;
-    background-color: green;
+    background-color: green !important;
 }
-.btn-generate {
+.btn-large {
     display: block;
     width: 100%;
 }
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
 
+@media screen and (max-width: 400px) {
+        .result-container {
+            font-size: 14px;
+        }
+}
