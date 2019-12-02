@@ -21,18 +21,20 @@
         <div class='row col-lg-12 col-md-12 col-sm-12'>
             <div class='buttonBox col-lg-8 col-md-8 col-sm-8'>
                 <div class='container mainReason'>
-                    <h2 class='main-hover'>Password Generator</h2>
+                    <h2>Password Generator<i class='fa fa-eye-slash'></i></h2>
                 </div>
                 <div class='result-container'>
                     <span id='result'></span>
-                    <button class='btn' id='clipboard'>
-                        <i class='far fa-clipboard'></i>
+                    <button class='btn copy-hover' id='clipboard'>
+                        <i class='fas fa-paste'></i>
                     </button>
                 </div>
                 <div class='settings'>
                     <div class='setting'>
                         <label class='setting-hover'>Password Length</label>
+                        <span class='pl-5 ml-5'>8 Min.</span>
                         <input type='number' id='length' min='8' max='128' value='' />
+                        <span class='pr-2'>128 Max.</span>
                     </div>
                     <div class='setting'>
                         <label class='setting-hover'>Uppercase letters</label>
@@ -51,8 +53,8 @@
                         <input type='checkbox' id='numbers' />
                     </div>
                 </div>
-                <button class='btn btn-large' id='generate'>
-                    Generate a password?
+                <button class='btn btn-large generate-hover col-lg-12 col-md-12 col-sm-12' id='generate'>
+                    Make a password
                 </button>
             </div>
         </div>

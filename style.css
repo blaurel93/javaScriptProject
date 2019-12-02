@@ -10,11 +10,15 @@
 .head-hover:hover {
     color: green;
 }
-.main-hover:hover {
-    color: green;
-}
+
 .setting-hover:hover {
     color: green;
+}
+.generate-hover:hover {
+    background-color: rgb(44, 70, 5) !important;
+}
+.copy-hover:hover {
+    background-color: rgb(44, 70, 5) !important;
 }
 body {
     background: url(https://images.pexels.com/photos/754082/pexels-photo-754082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)no-repeat center center fixed; 
@@ -30,11 +34,12 @@ body {
 }
 /* body of buttons */
 .buttonBox {
-    background-color:transparent;
+    background-color:rgba(0, 0, 0, 0.8);
     padding: 1px;
     width: 60%;
     height: 470px;
     margin: auto;
+    box-shadow: 0px 2px 10px rgba(55, 455, 155, 0.5);
 }
 .mainReason {
     text-align: center;
@@ -47,7 +52,7 @@ body {
 /* main button style */
 
 .result-container {
-    background-color:whitesmoke;
+    box-shadow: 0px 0px 9px rgba(248, 248, 248);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -61,6 +66,7 @@ body {
 .result-container #result {
     word-wrap: break-word;
     max-width: calc(100% - 40px);
+    font-family: 'Josefin Sans', sans-serif;
 }
 .result-container .btn {
     font-size: 20px;
@@ -71,12 +77,13 @@ body {
     width: 40px;
 }
 .btn {
-    border: 1px solid black !important;
+    border: 1px solid white !important;
     color: #fff !important;
-    cursor: crosshair;
+    cursor: grab!important;
     font-size: 16px;
-    padding: 8px 12px;
+    padding: 2px 1px 1px 1px!important;
     background-color: green !important;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .btn-large {
     display: block;
