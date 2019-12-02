@@ -68,6 +68,7 @@ body {
     max-width: calc(100% - 40px);
     font-family: 'Josefin Sans', sans-serif;
     color: white;
+    font-size: 12px;
 }
 .result-container .btn {
     font-size: 20px;
