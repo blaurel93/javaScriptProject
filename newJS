@@ -1,0 +1,74 @@
+const resultEl = document.getElementById('result');
+const lengthEl = document.getElementById('length');
+const uppercaseEl = document.getElementById('uppercase');
+const lowercaseEl = document.getElementById('lowercase');
+const numbersEl = document.getElementById('numbers');
+const symbolsEl = document.getElementById('symbols');
+const generateEl = document.getElementById('generate');
+const clipboard = document.getElementById('clipboard');
+// DOM ELEMENTS //
+var lowChars = "abcdefghijklmnopqrstuvwxyz"
+var highChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var passNum = "123456789";
+var passSpeci = "!@#$%^&*()+";
+// EVENTS //
+
+// GENERATE EVENT // 
+
+generateEl.addEventListener('click', function (e) {
+    var characters = '';
+    (numbersEl.checked) ? characters += passNum : '';
+    (symbolsEl.checked) ? characters += passSpeci : '';
+    (lowercaseEl.checked) ? characters += lowChars : '';
+    (uppercaseEl.checked) ? characters += highChars : '';
+    // THE ?  CHECKS TO SEE IF THE CHECK BOX IS CHECKED , if it is , IT WILL RETURN TRUE AND DO //
+    // WHAT THIS DOES ABOVE IS CHECK IF IT IS ACTUALLY CHECKED, AND IF IT IS, It WILL ADD THE var ABOVE  IN EVENTS BY CONCATINATION //
+    // Hence , if characters is = nothing it will add onto that with -- nothing plus Numbers  if thats only checked it will only return numbers //
+    // if anything else is check it will get thrown into the mix added on with the characters that = '' nothing. null . 
+    if (lengthEl.value === '') {
+        return;
+        // if user doesnt choose a number , you cannot generate //
+    } else {
+        return resultEl.innerText = password(lengthEl.value, characters);
+    }
+    // if user does choose a number, it will concatinate all options chosen and spit it out in the resultEl.innerText //
+    // after running the password function which takes 
+});
+
+
+
+
+
+function password(length, characters) {
+    var passwerd = '';
+    for (var i = 0; i < length; i++) {
+        passwerd += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return passwerd;
+}
+
+
+// GENERATE PASSWORD FUNCTION //
+
+
+/// copy the text to clipboard ////
+document.getElementById("clipboard").addEventListener("click", copy);
+
+function copy() {
+    var copyText = document.getElementById("result");
+    //// grab the results that you generated ///
+    var textArea = document.createElement("textarea");
+    //// created a invisible text area zone ///
+    textArea.value = copyText.textContent;
+    //// push that creation to the body /// 
+    document.body.appendChild(textArea);
+    //// select the text area with the results inside /// 
+    textArea.select();
+    ///// coppy it //// 
+    document.execCommand("Copy");
+    //// remove the appended child so it was like it was never there ////
+    textArea.remove();
+    ///// now you have saved the results by creating a text area in the body saving what was inside of it and removing the text area at practically the same time ///
+    /// it was like it never happened and you have the results saved everytime you push the clipboard button //// 
+    alert('Passcode Copied :)')
+};
