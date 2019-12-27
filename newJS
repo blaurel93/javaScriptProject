@@ -21,7 +21,10 @@ generateEl.addEventListener('click', function (e) {
     (symbolsEl.checked) ? characters += passSpeci : '';
     (lowercaseEl.checked) ? characters += lowChars : '';
     (uppercaseEl.checked) ? characters += highChars : '';
-    // THE ?  CHECKS TO SEE IF THE CHECK BOX IS CHECKED , if it is , IT WILL RETURN TRUE AND DO //
+    /// THE QUESTION MARK CHECKS condition ? value if true : value if false /// 
+    /// that being said if the box is checked it will concatinate characters which is nothing //
+    /// plus whats checked passNum  or whatever IF Its checked which equivilates to true ///
+    // THE .CHECKED TO SEE IF THE CHECK BOX IS CHECKED , if it is , IT WILL RETURN TRUE AND DO //
     // WHAT THIS DOES ABOVE IS CHECK IF IT IS ACTUALLY CHECKED, AND IF IT IS, It WILL ADD THE var ABOVE  IN EVENTS BY CONCATINATION //
     // Hence , if characters is = nothing it will add onto that with -- nothing plus Numbers  if thats only checked it will only return numbers //
     // if anything else is check it will get thrown into the mix added on with the characters that = '' nothing. null . 
